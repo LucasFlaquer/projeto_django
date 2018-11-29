@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock%}
+{% block content %}
+{% if messages %}
+    <ul class="messages">
+        {%for message in messages %}
+            <li {%if message.tags %} class="{{message.tags}} {%endif%}>{{message}}</li>
+        {%endfor%}
+    </ul>
+{%endif %}
+	<div class="login">
+        <figure class="figure"><img src="{% static 'img/facens-logo.png'%}"></figure>
+		<form method="POST">
+			{%csrf_token %}
+			<div class="form-group">
+		    	<label for="username">User</label>
+		    	<input type="text" id="username" class="form-control" name="user" placeholder="User">
+		  	</div>
+            <div class="form-group">
+		        <label for="password">Password</label>
+		        <input type="password" id="password" class="form-control" name="password" placeholder="Password">
+		    </div>
+		    <!--<a href="#" class="btn btn-primary">Submit</a>-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+.casdastro-plano--title {
+	font-size: 2rem;
+}
+
+.cadastro-plano--professor {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.cadastro-plano--item {
+	margin-bottom: 3rem;
+	border: 1px dotted #ddd;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(212, 225, 236, 0.11);
+}
+
+.cadastro-plano--item .bibliografia {
+	display: block;
+}
+.cadastro-plano--item .btn--add {
+	align-self: flex-end;
+}
+

@@ -1,0 +1,12 @@
+.nav-item {
+	padding: 0 20px;
+}
+.interna ul {
+	max-width: 500px;
+	display: inline-block;
+}
+.interna li {
+    display: inline-block;
+    padding: 0 20px;	
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/interna.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro_plano.css' %}">
+    {%block custom_css%}{%endblock%}
+</head>
+<body>
+    <!--{% include 'includes/navbar.html' %}-->
+        {% block content %}
+            include para colocar uma navbar
+            <h1>default value</h1>
+        {% endblock %}
+    <!-- Jquery -->
+    <script src="{% static 'vendors/jquery/jquery-3.3.1.min.js' %}"></script>
+    <!-- Popper -->
+    <script src="{% static 'plugins/popper/dist/popper.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Main -->
+    <!-- <script src="js/main.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+{%block content%}
+    {% include 'includes/navbar.html'%}
+    <main class="interna">
+		<div class="container">
+			<h1>Plano da disciplina: <span>{{disc.disciplina.nome}}</span></h1>
+			<ul>
+				{%for plan in planos %}
+                    <li>
+                        <ul>
+
+                            <li>{{plan.profDiscCurso.profDisc.professor.name}}</li>
+                            <li>{{plan.profDiscCurso.profDisc.disciplina.nome}}</li>
+                            <li>{{plan.profDiscCurso.DiscCurso.curso.nome}}</li>
+                            <li>{{plan.profDiscCurso.DiscCurso.curso.coord.nome}}</li>
+                            <li>{{plan.semestre}}</li>
+                        </ul>
+                    </li>
+                {%endfor%}
+			</ul>
+
+			<a href="{%url 'professor:novo_plano' disc.id %}" class="btn btn-secondary">Novo Plano</a>
+		</div>
+	</main>
+{%endblock%}
+
